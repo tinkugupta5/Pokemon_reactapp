@@ -9,8 +9,8 @@ const Card = ({pokemon,loading}) => {
             return (
                 <>
                     <div className='card'>
-                        <h2>1</h2>
-                        <img src='./images/charmander.png' alt=''/>
+                        <h2>{item.id}</h2>
+                        <img src={item.sprites.front_default} alt=''/>
                         <h2>Charmender</h2>
                     </div>
                 </>

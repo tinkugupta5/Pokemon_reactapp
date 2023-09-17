@@ -22,10 +22,12 @@ const Main = () => {
 
     const getPokemon = async(res) => {
         res.map(async(item) => {
-            const results = await axios.get(item.url)
-            console.log('line no 26 ',results)
+            const result = await axios.get(item.url)
+            console.log('line no 26 ',result)
             setPokeData(state=>{
-                state=[...state,results.data]
+                state=[...state,result.data]
+                state.sort((a,b)=>a.id>b.id?1:-1)
+                return state;
             })
         })
     }
