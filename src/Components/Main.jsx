@@ -35,8 +35,6 @@ const Main = () => {
 
     // 26:35 youtube
 
-
-
     useEffect(()=>{
         pokeFun();
     },[url])
