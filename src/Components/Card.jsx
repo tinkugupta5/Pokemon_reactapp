@@ -11,7 +11,7 @@ const Card = ({pokemon,loading}) => {
                     <div className='card'>
                         <h2>{item.id}</h2>
                         <img src={item.sprites.front_default} alt=''/>
-                        <h2>Charmender</h2>
+                        <h2>{item.name}</h2>
                     </div>
                 </>
             )
