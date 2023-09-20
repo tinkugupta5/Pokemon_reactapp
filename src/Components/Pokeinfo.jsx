@@ -1,11 +1,16 @@
 import React from 'react'
 
-const Pokeinfo = () => {
+const Pokeinfo = ({data}) => {
+  console.log(data);
   return (
     <>
 
-    <h1>Charmander</h1>
-    <img src='' alt=''/>
+    {
+      (!data)?"":( 
+        <>
+
+<h1>Charmander</h1>
+    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt=''/>
     <div className="abilities">
         <div className="group">
         <h2>blaze</h2>
@@ -23,8 +28,16 @@ const Pokeinfo = () => {
         <h3>defense:43</h3>
         <h3>Special attack 53</h3>
         <h3>Speed</h3>
-
+        
     </div>
+
+
+        </>
+
+      )
+    }
+
+    
     
     
     

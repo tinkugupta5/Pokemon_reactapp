@@ -9,6 +9,7 @@ const Main = () => {
     const [ url,setUrl] = useState('https://pokeapi.co/api/v2/pokemon')
     const [nextUrl,setNextUrl] = useState();
     const [prevUrl,setPrevUrl] = useState();
+    const [pokeDex,setPokeDex] = useState();
 
     const pokeFun = async() => {
         setLoading(true);
@@ -41,7 +42,7 @@ const Main = () => {
     <>
 <div className='container'>
         <div className="left-content">
-            <Card pokemon={pokeData} loading={loading} />
+            <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)} />
             
             <div className='btn-group'>
                 <button>Previous</button>
@@ -49,7 +50,7 @@ const Main = () => {
             </div>
         </div>
         <div className="right-content">
-            <Pokeinfo/>
+            <Pokeinfo data={pokeDex} />
         </div>
     </div>
     
