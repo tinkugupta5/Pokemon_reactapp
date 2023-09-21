@@ -22,13 +22,11 @@ const Pokeinfo = ({data}) => {
     </div>
 
     <div className='base-stat'>
-
         <h3>Hp:30</h3>
         <h3>attack:52</h3>
         <h3>defense:43</h3>
         <h3>Special attack 53</h3>
         <h3>Speed</h3>
-        
     </div>
 
 
